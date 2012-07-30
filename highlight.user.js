@@ -11,18 +11,18 @@
 var elements2_0 = document.getElementsByClassName("objectlist");
 
 if( elements2_0 && elements2_0.length != 0){
-  if( child = elements2_0.item().childNodes ){
+  if( child = elements2_0.item(0).childNodes ){
     if( child2 = child.item(0).childNodes ){
       var text = child2.item(1).text ;
     }
   }
   if ( text ){
     if( text == "Template list" || text == "テンプレートリスト" ){
-      var parent = elements2_0.item().parentNode;
+      var parent = elements2_0.item(0).parentNode;
       parent.style.background = "#ffb6c1";
       var area = document.getElementsByClassName("ui-tabs-panel");
       if( area && area.length != 0){
-        area.item().style.background = "#ffb6c1";
+        area.item(0).style.background = "#ffb6c1";
       }
     }
   }else{
@@ -37,10 +37,10 @@ if( elements2_0 && elements2_0.length != 0){
 var elements1_8 = document.getElementsByClassName("infobox");
 
 if( elements1_8 && elements1_8.length != 0 ){
-  var text = elements1_8.item().getElementsByTagName("strong").item().textContent;
+  var text = elements1_8.item(0).getElementsByTagName("strong").item(0).textContent;
   if( text ){
     if( text == "Templates list" || text == "テンプレート一覧" ){
-      elements1_8.item().style.background = "#ffb6c1";
+      elements1_8.item(0).style.background = "#ffb6c1";
     }
   }
 }
@@ -52,9 +52,9 @@ var key_field = document.getElementById("key")
 if( key_field ){
   if( key_field.getAttribute("readonly") == "readonly" ){
     if( document.getElementsByClassName("formlist").length != 0){
-      document.getElementsByClassName("formlist").item().style.background = "#ffb6c1";
+      document.getElementsByClassName("formlist").item(0).style.background = "#ffb6c1";
     }else if( document.getElementsByClassName("formtable").length != 0){
-      document.getElementsByClassName("formtable").item().parentNode.style.background = "#ffb6c1";
+      document.getElementsByClassName("formtable").item(0).parentNode.style.background = "#ffb6c1";
     }
   }
 }
@@ -66,9 +66,9 @@ var name_field = document.getElementById("description")
 if( name_field ){
   if( name_field.getAttribute("readonly") == "readonly" ){
     if( document.getElementsByClassName("formlist").length != 0){
-      document.getElementsByClassName("formlist").item().style.background = "#ffb6c1";
+      document.getElementsByClassName("formlist").item(0).style.background = "#ffb6c1";
     }else if( document.getElementsByClassName("formtable").length != 0){
-      document.getElementsByClassName("formtable").item().parentNode.style.background = "#ffb6c1";
+      document.getElementsByClassName("formtable").item(0).parentNode.style.background = "#ffb6c1";
     }
   }
 }
@@ -81,7 +81,7 @@ var name_field = document.getElementById("name")
 if( name_field ){
   if( name_field.getAttribute("disabled") == "disabled" ){
     if( document.getElementsByClassName("formlist").length != 0){
-      document.getElementsByClassName("formlist").item().style.background = "#ffb6c1";
+      document.getElementsByClassName("formlist").item(0).style.background = "#ffb6c1";
     }
   }
 }
@@ -98,7 +98,7 @@ if( temp_reg_header && temp_reg_header.length != 0 ){
       if( text.match(/テンプレート|Template/) != null ){
         var area = document.getElementsByName("tpl_for");
         if( area.length != 0 ){
-          area.item().style.background = "#ffb6c1";
+          area.item(0).style.background = "#ffb6c1";
         }
       }
     }
@@ -115,7 +115,7 @@ if( history.length != 0 ){
     
     var formtable = document.getElementsByClassName("formtable");
     if( formtable.length != 0){
-      formtable.item().parentNode.style.background = "#ffb6c1";
+      formtable.item(0).parentNode.style.background = "#ffb6c1";
     }
   }
 }
